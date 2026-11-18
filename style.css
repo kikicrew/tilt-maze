@@ -5,3 +5,13 @@
 @media(max-width:800px){.app-shell{padding:18px 24px 20px}.game-layout{grid-template-columns:1fr;gap:35px;padding:40px 0}.intro{text-align:center}.eyebrow{margin-bottom:15px}h1{font-size:46px}.subtitle{margin:16px 0 20px}.status-row,.actions,.hint{justify-content:center}.actions{margin-top:18px}.hint{flex-wrap:wrap}.board-wrap{width:min(100%,480px)}.footer{gap:12px;font-size:8px}}
 @media(max-width:420px){.app-shell{padding:14px 16px}.game-layout{padding:30px 0;gap:27px}h1{font-size:40px}.subtitle{font-size:13px}.board{border-width:7px}.edition{font-size:8px}.footer{font-size:7px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Eight-cell guide and dynamically generated walls for the three maze levels. */
+.board::before{background-image:linear-gradient(to right,transparent calc(100% - 1px),#8da0842c 1px),linear-gradient(to bottom,transparent calc(100% - 1px),#8da0842c 1px);background-size:8.3333% 8.3333%}
+.board::after{display:none}
+.wall{border-radius:2px}
+.ball{width:6%}
+.language-button{min-height:44px;min-width:82px;padding:0 12px;border:1px solid var(--line);border-radius:7px;background:#fbfcf9;color:#52604f;font:600 12px 'Manrope','Noto Sans KR',sans-serif;cursor:pointer}
+.language-button:hover{background:#eaf2e3;border-color:#bdcbb4}
+.language-button:focus-visible,.primary-button:focus-visible,.text-button:focus-visible,.finish-message button:focus-visible{outline:3px solid #85b94d;outline-offset:3px}
+
