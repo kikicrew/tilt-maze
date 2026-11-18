@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7f2">
+  <title>기울여라! — 센서 미로</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="기울여라 홈"><span class="brand-mark">◉</span> 기울여라!</a>
+      <span class="edition">SENSOR MAZE · 01</span>
+    </header>
+
+    <section class="game-layout" aria-labelledby="game-title">
+      <div class="intro">
+        <p class="eyebrow">기울여서 탈출하기</p>
+        <h1 id="game-title">공을 <span>목표까지</span><br>굴려보세요.</h1>
+        <p class="subtitle">기기를 기울이거나 방향키를 눌러<br class="desktop-break"> 파란 공을 초록색 목표에 데려가세요.</p>
+        <div class="status-row">
+          <span class="sensor-dot" id="sensor-dot"></span>
+          <span id="sensor-status" aria-live="polite">센서 연결 전</span>
+          <span class="status-divider">·</span>
+          <span id="move-count">이동 0</span>
+        </div>
+        <div class="actions">
+          <button class="primary-button" id="sensor-button" type="button">기울기 센서 켜기 <span aria-hidden="true">↗</span></button>
+          <button class="text-button" id="reset-button" type="button">다시 시작 <span aria-hidden="true">↻</span></button>
+        </div>
+        <p class="hint"><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> 키보드로도 조작할 수 있어요</p>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board-label"><span>LEVEL 01</span><span>초보자 코스</span></div>
+        <div class="board" id="board" role="img" aria-label="벽을 피해 공을 목표까지 움직이는 미로">
+          <div class="goal" aria-label="목표 지점"><span>★</span></div>
+          <div class="ball" id="ball" aria-label="플레이어 공"><span></span></div>
+          <div class="finish-message" id="finish-message" aria-live="polite">
+            <span class="finish-icon">✦</span><strong>도착했어요!</strong><span>멋진 조작이에요.</span>
+            <button id="play-again" type="button">한 번 더 하기 ↻</button>
+          </div>
+        </div>
+        <div class="board-footer"><span>START <i></i></span><span>FINISH <i>★</i></span></div>
+      </div>
+    </section>
+
+    <footer class="footer"><span>작은 기울기, 큰 모험.</span><span>Surface Pro 11 · 터치와 센서로 플레이</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
